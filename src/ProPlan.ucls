@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="me.zero.tls.proplan.gui.controller.DeleteController" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller/DeleteController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="194" x="2253" y="826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="me.zero.tls.proplan.gui.controller.InfoController" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller/InfoController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="194" x="88" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="3" language="java" name="me.zero.tls.proplan.lang" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/lang" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="160" x="322" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="4" language="java" name="me.zero.tls.proplan.components.Plan" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/components/Plan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="747" width="193" x="2621" y="1127"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="5" language="java" name="me.zero.tls.proplan.gui.controller" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="211" x="522" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="6" language="java" name="me.zero.tls.proplan.gui.components.ProPlanToolBar" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/components/ProPlanToolBar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="181" x="3084" y="826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="me.zero.tls.proplan.gui.util.GraphicsUtil" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/util/GraphicsUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="192" x="773" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="me.zero.tls.proplan.gui.controller.LadePlanController" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller/LadePlanController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="194" x="1005" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="me.zero.tls.proplan.gui.controller.SpeicherPlanController" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller/SpeicherPlanController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="194" x="1239" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="10" language="java" name="me.zero.tls.proplan.gui.util" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/util" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="173" x="1473" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="11" language="java" name="me.zero.tls.proplan.components.ProcessXT" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/components/ProcessXT.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="267" x="2293" y="1127"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="me.zero.tls.proplan.gui.components.Tabs" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/components/Tabs.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="229" x="2815" y="826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="me.zero.tls.proplan.components.Process" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/components/Process.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1107" width="214" x="2347" y="1914"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="14" language="java" name="me.zero.tls.proplan.gui.components" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/components" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="227" x="1686" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="15" language="java" name="me.zero.tls.proplan.components" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/components" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="207" x="1953" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="16" language="java" name="me.zero.tls.proplan.lang.Lang" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/lang/Lang.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="203" x="2200" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="me.zero.tls.proplan.gui.view.ProPlanUI" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/view/ProPlanUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="131" x="3305" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="me.zero.tls.proplan.gui.components.ProPlanFooter" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/components/ProPlanFooter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="189" x="3305" y="826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="me.zero.tls.proplan.gui.components.GridCenter" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/components/GridCenter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="165" x="2621" y="1914"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="20" language="java" name="me.zero.tls.proplan.lang.Language1" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/lang/Language1.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="747" width="270" x="2443" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="21" language="java" name="me.zero.tls.proplan.ProPlan" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/ProPlan.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="117" x="2753" y="39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="me.zero.tls.proplan.gui.controller.EditController" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller/EditController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="194" x="2581" y="826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="23" language="java" name="me.zero.tls.proplan" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="133" x="2910" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="24" language="java" name="me.zero.tls.proplan.gui.controller.NeuerPlanController" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/controller/NeuerPlanController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="315" width="194" x="3084" y="1127"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="25" language="java" name="me.zero.tls.proplan.gui.view" project="OOP_ProPlan" 
+    file="/OOP_ProPlan/src/me/zero/tls/proplan/gui/view" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="182" x="3083" y="39"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <association id="26">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="27" name="neuerplancontroller">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="30" name="plan">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="33" name="parents">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="36" name="nodes">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <bendpoint x="2590" y="1127"/>    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="39" name="node">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="42" name="center">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <bendpoint x="2262" y="1127"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="45" name="node">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="48" name="tabToPanel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="51" name="plan">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="52" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="54" name="childs">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="57">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="58" name="proPlanFooter">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="59" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="60">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="61" name="proPlanToolbar">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="62" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="64" name="tabs">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="65" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
