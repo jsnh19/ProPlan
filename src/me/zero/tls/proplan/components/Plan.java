@@ -19,8 +19,6 @@ import javax.swing.JLabel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-
-
 import me.zero.tls.proplan.gui.components.GridCenter;
 import me.zero.tls.proplan.gui.controller.DeleteController;
 import me.zero.tls.proplan.gui.controller.EditController;
@@ -35,17 +33,14 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 
 	// Needed for Serializable
 	private static final long serialVersionUID = -4382460341892888334L;
-
 	// List of Processes this Plan has
 	public ArrayList<Process> nodes = new ArrayList<>();
-
 	// The Offset a Node should have
 	private static final int OFFSET = 50;
 	// Max Childs per Node
 	public static int MAX_CHILDS = 10;
 	// Max Parents per Node
 	public static int MAX_PARENTS = 10;
-
 	// Name of this Plan
 	private final String name;
 	// Description of this Plan
@@ -53,31 +48,25 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 	// Used to position the Grid System
 	public static int display_middle_x;
 	public static int display_middle_y;
-
 	// Variables which store the dragged offset
 	public static int movedX;
 	public static int movedY;
-
 	// Variable used to re-position Objects
 	public int offsetToZeroX = 0;
 	public int offsetToZeroY = 0;
-
 	// The GridSystem
 	private GridCenter center;
-
 	// The last time the user clicked
 	private Long lastClickedTime = 0L;
-
 	// Position on screen where the user started dragging
 	public int xStartDragging = -1;
 	public int yStartDragging = -1;
-
 	public static int width = 100;
-	public static int height = 100;
-	
-	public boolean changed = false;
-	
+	public static int height = 100;	
+	public boolean changed = false;	
 	private JLabel tabTitle;
+	public String saveFileName = null;
+	
 	
 	public Plan(String name, String description) {
 		this.name = name;
@@ -172,7 +161,6 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 				pro.setFAZ(0);
 				pro.setFEZ(0);				
 				first = false;
-				System.out.println("First Node is " + pro.getName());
 			}else {
 				pro.setFAZ(pro.getHightestParentFEZ());
 				pro.setFEZ(pro.FAZ + pro.getDauer());
@@ -218,10 +206,7 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 		if(lastProcess != null) {
 			lastProcess.setSEZ(lastProcess.getFEZ());
 			lastProcess.setSAZ(lastProcess.getSEZ() - lastProcess.getDauer());
-			System.out.println("lastProcess = " + lastProcess.getName() + " (" + lastProcess.getID() + ")");
 			lastProcess.startBackward_scheduling();
-		}else {
-			System.out.println("kein ende gefunden!");
 		}
 		
 		
@@ -245,7 +230,7 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 		}*/
 	}
 
-	private Process getStartProcess() {
+	/*private Process getStartProcess() {
 		Process smallestProcess = null;
 		for(Process pro : nodes) {
 			if(smallestProcess == null || pro.getID() < smallestProcess.getID()) {
@@ -253,13 +238,11 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 			}
 		}
 		return smallestProcess;
-	}
+	}*/
 	
 	private Process getEndProcess() {
 		for(Process pro : nodes) {
-			System.out.println("checking " + pro.getName() + " if it is the end...");
 			if(pro.isEnd) {
-				System.out.println("yes");
 				return pro;
 			}
 		}
@@ -350,7 +333,22 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// unused
+		
+		//unselect all Nodes
+		for (Process node : nodes) {
+			node.isDragging = false;
+		}
+		
+		//Select one Node
+		for (Process node : nodes) {
+			// Prüfe ob dieses Node angeklickt wurde
+			if (e.getX() >= (node.getStartX() - OFFSET)&& e.getX() <= ((node.getStartX() - OFFSET) + Plan.width + OFFSET)) {
+				if (e.getY() >= (node.getStartY() - OFFSET)&& e.getY() <= ((node.getStartY() - OFFSET) + Plan.height + OFFSET)) {
+					node.mousePressed();
+					break;
+				}
+			}
+		}
 	}
 
 	@Override
@@ -369,12 +367,12 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 		offsetToZeroX = 0;
 		offsetToZeroY = 0;
 		boolean anythingReleased = false;
+		
+		
 		for (Process node : nodes) {
 			// PrÃ¼fe ob dieses Node angeklickt wurde
-			if (e.getX() >= (node.getStartX() - OFFSET)
-					&& e.getX() <= ((node.getStartX() - OFFSET) + Plan.width + OFFSET) && !anythingReleased) {
-				if (e.getY() >= (node.getStartY() - OFFSET)
-						&& e.getY() <= ((node.getStartY() - OFFSET) + Plan.height + OFFSET)) {
+			if (e.getX() >= (node.getStartX() - OFFSET)&& e.getX() <= ((node.getStartX() - OFFSET) + Plan.width + OFFSET) && !anythingReleased) {
+				if (e.getY() >= (node.getStartY() - OFFSET)&& e.getY() <= ((node.getStartY() - OFFSET) + Plan.height + OFFSET)) {
 					node.mouseReleased(e);
 					anythingReleased = true;
 				}
@@ -418,18 +416,23 @@ public class Plan extends JComponent implements MouseListener, MouseMotionListen
 
 		this.offsetToZeroX = xStartDragging - e.getX();
 		this.offsetToZeroY = yStartDragging - e.getY();
-
+		
 		for (Process node : nodes) {
-			// PrÃ¼fe ob dieses Node angeklickt wurde
-			if (e.getX() >= (node.getStartX() - OFFSET)
-					&& e.getX() <= ((node.getStartX() - OFFSET) + Plan.width + OFFSET) && !anythingDragged) {
-				if (e.getY() + node.getMouseDragginOffsetY() >= (node.getStartY() - OFFSET)
-						&& e.getY() <= ((node.getStartY() - OFFSET) + Plan.height + OFFSET)) {
+			if(node.isDragging) {
+				anythingDragged = true;
+				node.updatePosition(offsetToZeroX * -1, offsetToZeroY * -1);
+			}
+		}
+
+		/*for (Process node : nodes) {
+			// Prüfe ob dieses Node angeklickt wurde
+			if (e.getX() >= (node.getStartX() - OFFSET) && e.getX() <= ((node.getStartX() - OFFSET) + Plan.width + OFFSET) && !anythingDragged) {
+				if (e.getY() + node.getMouseDragginOffsetY() >= (node.getStartY() - OFFSET) && e.getY() <= ((node.getStartY() - OFFSET) + Plan.height + OFFSET)) {
 					node.updatePosition(offsetToZeroX * -1, offsetToZeroY * -1);
 					anythingDragged = true;
 				}
 			}
-		}
+		}*/
 		if (!anythingDragged) {
 			// Drag all ?
 			for (Process node : nodes) {

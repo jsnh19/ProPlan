@@ -50,7 +50,22 @@ public class LadePlanController extends FileFilter implements ActionListener{
     		fc = new JFileChooser();
     	}
         
-        fc.addChoosableFileFilter(this);
+    	fc.addChoosableFileFilter(this);
+    	fc.addChoosableFileFilter(new FileFilter() {
+			
+    		 @Override
+    		    public boolean accept(File f) {
+    		        if (f.isDirectory()) {
+    		            return true;
+    		        }
+    		        return f.getName().endsWith(".plan");
+    		    }
+
+    		    @Override
+    		    public String getDescription() {
+    		        return Lang.getLanguageValue(Language.FILTER_PLAN_FILES_SECOND);
+    		    }
+		});
         fc.setAcceptAllFileFilterUsed(false);
         int returnVal = fc.showOpenDialog(null);
         if(returnVal == 0){
@@ -74,6 +89,7 @@ public class LadePlanController extends FileFilter implements ActionListener{
             		Gson gson = new GsonBuilder().setPrettyPrinting().create();		            		
             		HashMap<String, Object> data = gson.fromJson(json.toString(), new TypeToken<HashMap<String, Object>>(){}.getType());   
             		Plan plan = new Plan(data.get("name").toString(), data.get("description").toString());
+            		plan.saveFileName = fc.getSelectedFile().getAbsolutePath() + ".plan";
             		 if(ProPlanUI.tabs.tabToPanel.containsKey(plan.getName())){
             			String message = Lang.getLanguageValue(Language.PLANEXISTS).replace("%plan%", plan.getName());
             			MessageUtil.showErrorMessage(Lang.getLanguageValue(Language.TITEL_ERROR), message);
@@ -96,7 +112,6 @@ public class LadePlanController extends FileFilter implements ActionListener{
             				);
             			allNodes.put(process.getID(), process);
             			plan.addNode(process);
-            			System.out.println("adding node with id " + listedNode.get("id").toString());
             		}
             		//Eltern und Kind Processe erstellen
             		for(Object node : nodes) {
@@ -109,13 +124,11 @@ public class LadePlanController extends FileFilter implements ActionListener{
             			List<?> childs = (List<?>) listedNode.get("childs");            			
             			for(Object s : childs) {
             				//Suche childProcess   
-            				System.out.println(s + " for node " + listedNode.get("description"));
             				Process child = getProcessFromListByID(Integer.parseInt(s.toString().replace(".0","")), plan.nodes); 
             				if(child == null) {
                 				MessageUtil.showErrorMessage(Lang.getLanguageValue(Language.TITEL_ERROR), Lang.getLanguageValue(Language.LOAD_CHILD_NOT_FOUND).replace("%id%", s.toString().replace(".0","")).replace("%name%", "\"" + listedNode.get("description").toString() + "\""));
                     			break;
             				}            			
-            				System.out.println("adding child " + child.getID() + " to " + workingProcess);
             				workingProcess.addSuccessor(child);       				
             			}            			
             			List<?> parents = (List<?>) listedNode.get("parents");
@@ -130,7 +143,6 @@ public class LadePlanController extends FileFilter implements ActionListener{
             			}
             		}
             		plan.calcData();
-            		plan.calcData();
             		ProPlanUI.tabs.addTab(plan);       
             		String message = Lang.getLanguageValue(Language.PLANLOADED).replace("%plan%", plan.getName());
                     MessageUtil.showInformationMessage(Lang.getLanguageValue(Language.TITEL_SUCCESS), message);                    
@@ -138,6 +150,7 @@ public class LadePlanController extends FileFilter implements ActionListener{
             		FileInputStream fis = new FileInputStream (fc.getSelectedFile());
                     ObjectInputStream ois = new ObjectInputStream (fis);
                     Plan plan = (Plan) ois.readObject();
+                    plan.saveFileName = fc.getSelectedFile().getAbsolutePath() + ".plan";
                     if(!ProPlanUI.tabs.tabToPanel.containsKey(plan.getName())){
                         ProPlanUI.tabs.addTab(plan);
                         plan.calcData();
@@ -192,7 +205,7 @@ public class LadePlanController extends FileFilter implements ActionListener{
         if (f.isDirectory()) {
             return true;
         }
-        return f.getName().endsWith(".plan") || f.getName().endsWith(".plson");
+        return f.getName().endsWith(".plson");
     }
 
     @Override

@@ -14,7 +14,6 @@ public class ProPlan {
 	 */
 	public static void main(String[] args) {
 		new Lang();
-		System.out.println("loading settings....");
 		new Settings();
 		new ProPlanUI();		
 	}
@@ -31,6 +30,6 @@ public class ProPlan {
 	 * @return String representing the version
 	 */
 	public static String getVersion() {
-		return "15052020";
+		return "01062020";
 	}
 }

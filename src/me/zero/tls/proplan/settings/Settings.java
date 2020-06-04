@@ -44,6 +44,7 @@ public class Settings {
 	 * @throws IOException 
 	 */
 	
+	@SuppressWarnings("unchecked")
 	public void load() throws IOException {
 		
 		//Lade default Einstellungen
@@ -67,7 +68,6 @@ public class Settings {
 	    		try {
 	    			Settings.instance.save();
 	    			MessageUtil.showInformationMessage(Lang.getLanguageValue(Language.INFORMATION_TITLE), Lang.getLanguageValue(Language.LANGUAGE_FILE_CHANGED));
-	    			System.out.println(UIManager.get("OptionPane.minimumSize"));
 	    		} catch (IOException e) {
 	    			e.printStackTrace();
 	    		}  
@@ -90,7 +90,6 @@ public class Settings {
 	 * @throws IOException
 	 */
 	public void save() throws IOException {
-		System.out.println("save");
 		//Exists Dir
 		if(!dir.exists()) {
 			dir.mkdirs();
@@ -115,7 +114,6 @@ public class Settings {
 	 * @return true if the Object returned by HashMap.put is the same as the given object
 	 */
 	public boolean change(SETTINGS_KEY key,Object obj) {
-		System.out.println("change " + key + " to " + obj);
 		try {
 			Settings.instance.settings.put(key.name(), obj);
 			save();

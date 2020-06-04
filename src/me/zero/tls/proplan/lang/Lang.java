@@ -140,7 +140,8 @@ public class Lang {
         messages.put(Language.PLANLOADED.name(), "Der Plan %plan% wurde geladen!");
         messages.put(Language.PLANNOTFOUND.name(), "Es wurde kein Plan ausgewählt!");
 
-        messages.put(Language.FILTER_PLAN_FILES.name(), "ProPlan Files (.plan | .plson)");
+        messages.put(Language.FILTER_PLAN_FILES.name(), "ProPlan File (.plson)");
+        messages.put(Language.FILTER_PLAN_FILES_SECOND.name(), "ProPlan File (.plan)");
         messages.put(Language.UNKNOWN_COMMAND.name(), "Unbekannte Wahl %command%");
         messages.put(Language.ADD.name(), "Hinzufügen");
         messages.put(Language.REMOVE.name(), "Löschen");
@@ -266,7 +267,8 @@ public class Lang {
     	
     	LANGUAGE_FILE_CHANGED,
     	PLANNOTFOUND,
-    	NO_END_DEFINED;
+    	NO_END_DEFINED,
+    	FILTER_PLAN_FILES_SECOND;
     }
 }
 

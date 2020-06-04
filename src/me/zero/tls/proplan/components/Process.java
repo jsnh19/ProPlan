@@ -53,7 +53,6 @@ public class Process extends ProcessXT implements Serializable{
         this.startX = startX;
         this.startY = startY;
         this.isEnd = isEnd;
-        System.out.println("new Process with name " + Bezeichnung + " and isEnd = " + isEnd);
     } 
     
     /**
@@ -76,12 +75,9 @@ public class Process extends ProcessXT implements Serializable{
      */
     public double getSmallestChildSAZ(){
     	double smallestSAZ  = Integer.MAX_VALUE;
-    	System.out.println("Get SmallestSAZ of " + this.getName() + " with " + childs.size() + " childs");
         for(Process node : childs){
-        	System.out.println("checking " + node.getName());
             if(node.SAZ < smallestSAZ){
             	smallestSAZ = node.SAZ;
-            	System.out.println(node.getName() + " is new smallest");
             }
         }
         return smallestSAZ;
@@ -90,7 +86,6 @@ public class Process extends ProcessXT implements Serializable{
     public void startBackward_scheduling() {
     	for(Process node : parents) {
     		if(node.parents.size() > 0) {
-    			System.out.println(node.getName() + " with " + node.parents.size() + " parents");
     			node.setSEZ(node.getSmallestChildSAZ());
     			node.setSAZ(node.getSEZ() - node.getDauer());	
     		}else {    			
@@ -171,7 +166,6 @@ public class Process extends ProcessXT implements Serializable{
             this.FreierPuffer = 0;
         }else{
         	double sfaz = getsmallestChildFAZ(childs);
-        	//System.out.println("smallest sfaz = " + sfaz + " -  with a fezof " + FEZ + " for process " + getName());
             this.FreierPuffer = sfaz - FEZ;
         }
     }
@@ -182,13 +176,10 @@ public class Process extends ProcessXT implements Serializable{
      * @return the smallest FAZ found
      */
     private double getsmallestChildFAZ(ArrayList<Process> childs){
-    	//System.out.println("Get smallestChildFAZ of " + this.getName());
         double smallestFAZ = Integer.MAX_VALUE;
         for(Process node : childs){
-        	//System.out.println("child " + node.getName() + " with faz of " + node.FAZ);
             if(node.FAZ < smallestFAZ){
                 smallestFAZ = node.FAZ;
-            	//System.out.println("new smallest faz = " + smallestFAZ);
             }
         }
         return smallestFAZ;
@@ -275,6 +266,9 @@ public class Process extends ProcessXT implements Serializable{
     public void mouseReleased(MouseEvent e) {
         isDragging = false;
     }
+    public void mousePressed() {
+		isDragging = true;		
+	}
     /**
      * Moves this {@link Process} to another Position on the screen,<br>its position will be added to the given parameters
      * @param posX The new X Position
@@ -469,7 +463,7 @@ public class Process extends ProcessXT implements Serializable{
      * @return boolean true if no parents are stored
      */
     public boolean isStartProcess(){
-        return parents.isEmpty();
+        return parents.isEmpty() || this.isEnd;
     }
     /**
      * Returns true if no childs are stored
@@ -581,6 +575,8 @@ public class Process extends ProcessXT implements Serializable{
 		
 		return data;
 	}
+
+	
     
     
 }
