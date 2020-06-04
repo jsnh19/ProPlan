@@ -62,12 +62,15 @@ public class InfoController implements ActionListener {
 	 */
 	private JPanel createPlanInfoPanel() {
 		JPanel mainpanel = new JPanel(new BorderLayout());
-		Plan plan = ProPlanUI.tabs.tabToPanel
-				.get(ProPlanUI.tabs.tabbedPane.getTitleAt(ProPlanUI.tabs.tabbedPane.getSelectedIndex()));
+		Plan plan = null;
+		if(ProPlanUI.tabs.tabbedPane.getSelectedIndex() >= 0) {
+			plan = ProPlanUI.tabs.tabToPanel.get(ProPlanUI.tabs.tabbedPane.getTitleAt(ProPlanUI.tabs.tabbedPane.getSelectedIndex()));
+		}
+		
 		// Namensanzeige
 		JPanel namepanel = new JPanel(new BorderLayout());
 		JLabel label_name_plan = new JLabel(Lang.getLanguageValue(Language.NEW_PLAN_NAME));
-		JLabel name_plan = new JLabel(plan.getName());
+		JLabel name_plan = new JLabel(plan==null?Lang.getLanguageValue(Language.PLANNOTFOUND):plan.getName());
 		namepanel.add(label_name_plan, BorderLayout.WEST);
 		namepanel.add(name_plan, BorderLayout.EAST);
 		namepanel.add(new JSeparator(), BorderLayout.SOUTH);
@@ -77,7 +80,7 @@ public class InfoController implements ActionListener {
 		JPanel descriptionpanel = new JPanel(new BorderLayout());
 		JLabel label_description_plan = new JLabel(Lang.getLanguageValue(Language.NEW_PLAN_DESCRIPTION));
 		JTextField description = new JTextField();
-		description.setText(plan.getDescription());
+		description.setText(plan==null?Lang.getLanguageValue(Language.PLANNOTFOUND):plan.getDescription());
 		description.setEditable(false);
 
 		descriptionpanel.add(label_description_plan, BorderLayout.NORTH);
