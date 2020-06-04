@@ -1,4 +1,4 @@
-<div style="text-align:center"><a href="https://github.com/1337Zero/ProPlan"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/FullLogo.png?raw=true" title="ProPlan" alt="ProPlan"></a></div>
+![alt text](https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/FullLogo.png?raw=true)
 
 # ProPlan
 > Your small project planing tool.
