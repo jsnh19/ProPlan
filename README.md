@@ -110,7 +110,7 @@ You can load a Plan out of 2 predefined file types
 
 > This file-type should be much more future proof than the .plan type.
 
-<div style="text-align:center"><https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/open.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
+![Open a plan](https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/open.PNG?raw=true)
 
 #### Storing a plan
 
@@ -120,7 +120,7 @@ As you read above ProPlan supports 2 file types
 
 > ProPlan will store the last stored/loaded file and will open that path if you load or save a plan.
 
-<div style="text-align:center"><https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/save.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
+![Save a plan](https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/save.PNG?raw=true)
 
 ### Edit a Process
 
