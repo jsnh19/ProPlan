@@ -1,4 +1,4 @@
-<div style="text-align:center"><a href="https://github.com/1337Zero/ProPlan"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/910781c45a926aae15a16625edaa907398811e9b/src/ressources/images/FullLogo.png" title="ProPlan" alt="ProPlan"></a></div>
+<div style="text-align:center"><a href="https://github.com/1337Zero/ProPlan"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/FullLogo.png?raw=true" title="ProPlan" alt="ProPlan"></a></div>
 
 # ProPlan
 > Your small project planing tool.
@@ -55,7 +55,7 @@ $ java -jar ProPlan.jar
 > - The * behind the Plan's name tells you, that you have unchanged changes.
 > - The footer holds a coordinate System telling you how far up and down, left and right you moved the plan.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/overview.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/overview.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 
 #### Creation of a new Plan
@@ -64,7 +64,7 @@ $ java -jar ProPlan.jar
 > - Only the Name of the new Plan is needed
 > - Add an optional description to store some information about your new plan 
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/910781c45a926aae15a16625edaa907398811e9b/src/ressources/images/newplan.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/newplan.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 
 #### Creation of a new Process
@@ -81,7 +81,7 @@ $ java -jar ProPlan.jar
 > - If your Process is the last Process of your Plan, please mark is as end. Its important to have an end and a begin.
 > - ProPlan will assume that the first Process  will be the start of your plan.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/910781c45a926aae15a16625edaa907398811e9b/src/ressources/images/newprocess.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/newprocess.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 > - Inside the tab predecessor, you can add a predecessor for the new Process. The new Process will be automatically a successor of each predecessor.
 
@@ -90,7 +90,7 @@ $ java -jar ProPlan.jar
 
 > - Press Ok to add the new process
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/newprocess2.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/newprocess2.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 #### Loading of a stored Plan
 
@@ -110,7 +110,7 @@ You can load a Plan out of 2 predefined file types
 
 > This file-type should be much more future proof than the .plan type.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/a9e1e53c0e738a35db4455ebe4b432c851c30311/src/ressources/images/open.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/open.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 #### Storing a plan
 
@@ -120,7 +120,7 @@ As you read above ProPlan supports 2 file types
 
 > ProPlan will store the last stored/loaded file and will open that path if you load or save a plan.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/a9e1e53c0e738a35db4455ebe4b432c851c30311/src/ressources/images/save.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/save.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 ### Edit a Process
 
@@ -135,7 +135,7 @@ If you want to edit an all ready created Process you got different ways to do so
 
 > If everything of the build in functions isn't helping you, you are able to edit the stored .plson file. Open it with a GZIP compatible File Manager and edit the file inside as you need.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/editprocess.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/editprocess.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 ### Delete a Process
 
@@ -154,7 +154,7 @@ The help page is displaying information about the running ProPlan version and ab
 > Inside the tab *Information about ProPlan* you can see the author and the version of ProPlan.
 > It also displays a small help text.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/plandescription.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://github.com/jsnh19/ProPlan/blob/master/src/ressources/images/plandescription.PNG?raw=true" title="ProPlan" alt="ProPlan"></div>
 
 ## Contributing
 
