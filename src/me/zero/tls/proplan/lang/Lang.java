@@ -111,7 +111,7 @@ public class Lang {
         messages.put(Language.CANCEL.name(), "abbrechen");
         messages.put(Language.TITEL_NEW_PLAN.name(), "Neuen Plan erstellen");
         messages.put(Language.TITEL_NEW_PROCESS.name(), "Neuen Prozess erstellen");
-        messages.put(Language.TITEL_EDIT_PROCESS.name(), "Plan editieren");
+        messages.put(Language.TITEL_EDIT_PROCESS.name(), "Prozess editieren");
         messages.put(Language.TITEL_ERROR.name(), "Fehler");
         messages.put(Language.TITEL_SUCCESS.name(), "Erfolg");
         messages.put(Language.ERROR_PLAN_NAME_LENGTH.name(), "Bitte geben Sie einen validen Plan Namen ein, doppelte sind nicht erlaubt!");
