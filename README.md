@@ -1,4 +1,4 @@
-<div style="text-align:center"><a href="https://github.com/1337Zero/ProPlan"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/FullLogo.png" title="ProPlan" alt="ProPlan"></a></div>
+<div style="text-align:center"><a href="https://github.com/1337Zero/ProPlan"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/910781c45a926aae15a16625edaa907398811e9b/src/ressources/images/FullLogo.png" title="ProPlan" alt="ProPlan"></a></div>
 
 # ProPlan
 > Your small project planing tool.
@@ -64,7 +64,7 @@ $ java -jar ProPlan.jar
 > - Only the Name of the new Plan is needed
 > - Add an optional description to store some information about your new plan 
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/newplan.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/910781c45a926aae15a16625edaa907398811e9b/src/ressources/images/newplan.PNG" title="ProPlan" alt="ProPlan"></div>
 
 
 #### Creation of a new Process
@@ -81,7 +81,7 @@ $ java -jar ProPlan.jar
 > - If your Process is the last Process of your Plan, please mark is as end. Its important to have an end and a begin.
 > - ProPlan will assume that the first Process  will be the start of your plan.
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/master/src/ressources/images/newprocess.PNG" title="ProPlan" alt="ProPlan"></div>
+<div style="text-align:center"><img src="https://raw.githubusercontent.com/jsnh19/ProPlan/910781c45a926aae15a16625edaa907398811e9b/src/ressources/images/newprocess.PNG" title="ProPlan" alt="ProPlan"></div>
 
 > - Inside the tab predecessor, you can add a predecessor for the new Process. The new Process will be automatically a successor of each predecessor.
 
@@ -189,4 +189,4 @@ The help page is displaying information about the running ProPlan version and ab
 ## License
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2019 © <a href="https://github.com/1337Zero/" target="_blank">1337Zero</a>.
+- Copyright 2019 © <a href="https://github.com/1337Zero/" target="_blank">1337Zero</a>.>.
